@@ -2,56 +2,56 @@
     <key>
         <flag>stepone</flag>
         <time>00:00:00:298</time>
-        <value>0.000000000</value>
+        <value>0</value>
     </key>
     <key>
         <flag />
         <time>00:00:01:119</time>
-        <value>0.553571463</value>
+        <value>0.553571</value>
     </key>
     <key>
         <flag>big</flag>
         <time>00:01:00:457</time>
-        <value>0.000000000</value>
+        <value>0</value>
     </key>
     <key>
         <flag>small</flag>
         <time>00:01:16:209</time>
-        <value>0.000000000</value>
+        <value>0</value>
     </key>
     <key>
         <flag>small</flag>
         <time>00:01:19:145</time>
-        <value>0.017857134</value>
+        <value>0.0178571</value>
     </key>
     <key>
         <flag>flag</flag>
         <time>00:01:19:845</time>
-        <value>0.000000000</value>
+        <value>0</value>
     </key>
     <key>
         <flag>flag</flag>
         <time>00:01:21:480</time>
-        <value>0.000000000</value>
+        <value>0</value>
     </key>
     <key>
         <flag>flag</flag>
         <time>00:01:40:499</time>
-        <value>0.000000000</value>
+        <value>0</value>
     </key>
     <key>
         <flag>flag</flag>
         <time>00:01:43:885</time>
-        <value>0.000000000</value>
+        <value>0</value>
     </key>
     <key>
         <flag>flag</flag>
         <time>00:02:05:524</time>
-        <value>0.000000000</value>
+        <value>0</value>
     </key>
     <key>
         <flag>flag</flag>
         <time>00:02:25:711</time>
-        <value>0.000000000</value>
+        <value>0</value>
     </key>
 </keyframes>
