@@ -753,7 +753,7 @@
 					"$(OF_CORE_LIBS)",
 					../../../addons/ofxTimeline/libs/sndfile/lib/osx/libsndfile.a,
 				);
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
@@ -817,7 +817,7 @@
 					"$(OF_CORE_LIBS)",
 					../../../addons/ofxTimeline/libs/sndfile/lib/osx/libsndfile.a,
 				);
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};

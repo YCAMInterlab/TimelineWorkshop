@@ -16,7 +16,7 @@ class testApp : public ofBaseApp{
 	void update();
 	void draw();
 
-	void keyPressed  (int key);
+	void keyPressed(int key);
 	void keyReleased(int key);
 	void mouseMoved(int x, int y );
 	void mouseDragged(int x, int y, int button);
@@ -27,11 +27,13 @@ class testApp : public ofBaseApp{
 	void gotMessage(ofMessage msg);
     
 	ofxTimeline timeline;
+	ofxTimeline slaveTimeline;
 	
-	ofxTLVideoTrack* video;
-	ofxTLFlags* flags;
-
-	ofRectangle videoRectangle;
-    
-	void flagFired(ofxTLBangEventArgs& flag);
+    ofxTLBangs* steps;
+	ofxTLCurves* mousex;
+	ofxTLCurves* mousey;
+	
+	void bangFired(ofxTLBangEventArgs& bang);
+	int lastFrameReceived;
+	
 };

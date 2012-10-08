@@ -26,7 +26,9 @@ void testApp::setup(){
 	//ofxDuration is an OSC receiver, with special functions to listen for Duration specific messages
 	//optionally set up a font for debugging
 	duration.setupFont("GUI/NewMedia Fett.ttf", 12);
+	
 	ofAddListener(duration.events.trackUpdated, this, &testApp::trackUpdated);
+	
 	commandFont.loadFont("GUI/NewMedia Fett.ttf", 8);
 	
 	pointSize = 2;
@@ -73,69 +75,30 @@ void testApp::setupSimpleParticleSystem(){
 //--------------------------------------------------------------
 //Or wait to receive messages, sent only when the track changed
 void testApp::trackUpdated(ofxDurationEventArgs& args){
-	//ofLogVerbose("Duration Event") << "track type " << args.track->type << " updated with name " << args.track->name << " and value " << args.track->value << endl;
-	string trackName = args.track->name;
-	if(trackName == "/generator/clear"){
+//	ofLogWarning("Received a track update!");
+//	ofLogWarning("Received a track update from " + args.track->type + " " + args.track->name);
+	if(args.track->name == "/noise/amplitude"){
+		//ofLogWarning("Received curves value " + ofToString(args.track->value));
+		//noiseForce.amplitude = args.track->value;
+	}
+	else if(args.track->name == "/pointsize"){
+		pointSize = args.track->value;
+	}
+	else if(args.track->name == "/generator/color"){
 		for(int i = 0; i < generators.size(); i++){
-			generators[i].particles.clear();
+			generators[i].color = args.track->color;
 		}
 	}
-	if(trackName == "/generator/birthrate"){
-		for(int i = 0; i < generators.size(); i++){
-			generators[i].birthRate = args.track->value;
-		}
-	}
-	//How long do the particles live on average
-	else if(trackName == "/generator/lifespan"){
-		for(int i = 0; i < generators.size(); i++){
-			generators[i].birthRate = args.track->value;
-		}
-	}
-	//Lifespan can vary this much from the average
-	else if(trackName == "/generator/lifespanVariance"){
-		for(int i = 0; i < generators.size(); i++){
-			generators[i].birthRate = args.track->value;
-		}
-	}
-	//how much to spread out from the source of the generator
-	else if(trackName == "/generator/spread"){
-		for(int i = 0; i < generators.size(); i++){
-			generators[i].spread = args.track->value;
-		}
-	}
-	else if(trackName == "/generator/color"){
-		ofFloatColor floatColor = ofFloatColor(args.track->color);
-		for(int i = 0; i < generators.size(); i++){
-			generators[i].color = floatColor;
-		}
-	}
-	//how much force from noise
-	else if(trackName == "/noise/amplitude"){
-		noiseForce.amplitude = args.track->value;
-	}
-	//density property of the noise field
-	else if(trackName == "/noise/density"){
-		noiseForce.density = args.track->value;
-	}
-	else if(trackName == "/noise/speed"){
-		noiseForce.speed = args.track->value;
-	}
-	else if(trackName == "/pointsize"){
-		pointSize = MAX(args.track->value, 1);
-	}
-	else if(trackName == "/gravity/amplitude"){
+	else if(args.track->name == "/gravity/amplitude"){
 		gravityForce.amplitude = args.track->value;
 	}
-	else if(trackName == "/swirl/amplitude"){
-		swirlForce.amplitude = args.track->value;
+	else if(args.track->name == "/audio/noise"){
+		if(args.track->fft[1] > .3){
+			noiseForce.amplitude = args.track->fft[1]*5;
+		}else{
+			noiseForce.amplitude = 0;
+		}
 	}
-	else if(trackName == "/swirl/x"){
-		swirlForce.center.x = args.track->value;
-	}
-	else if(trackName == "/swirl/y"){
-		swirlForce.center.y = args.track->value;
-	}
-	
 }
 
 //--------------------------------------------------------------

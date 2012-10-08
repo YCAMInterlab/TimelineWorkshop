@@ -46,6 +46,7 @@ class testApp : public ofBaseApp {
 	SimpleForceGravity gravityForce;
 	SimpelForceSwirl swirlForce;
 	ofVboMesh mesh;
+	
 	float pointSize;
 	int port;
 	int totalParticles;
