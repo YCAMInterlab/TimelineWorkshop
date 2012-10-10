@@ -18,7 +18,7 @@ void testApp::setup(){
 	ofxTimeline::removeCocoaMenusFromGlut("VideoTimer");
 	
 	timeline.setup();
-	timeline.setDurationInSeconds(4);
+	timeline.setLoopType(OF_LOOP_NORMAL);
 	timeline.addVideoTrack("fingers", "fingers.mov");
 	steps = timeline.addBangs("steps");
 	mousex = timeline.addCurves("mousex", ofRange(0,timeline.getVideoPlayer("fingers")->getWidth()));
@@ -26,6 +26,7 @@ void testApp::setup(){
 	
 	timeline.addColors("ball");
 	timeline.addLFO("slaveControl", ofRange(0,1.0));
+	
 	
 	ofAddListener(timeline.events().bangFired, this, &testApp::bangFired);
 	lastFrameReceived = 0;
