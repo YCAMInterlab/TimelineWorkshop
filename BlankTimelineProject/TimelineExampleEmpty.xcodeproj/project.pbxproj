@@ -53,7 +53,6 @@
 		E761F7121622CC7900029E43 /* ofxTLInOut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E761F64E1622CC7600029E43 /* ofxTLInOut.cpp */; };
 		E761F7131622CC7900029E43 /* ofxTLKeyframes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E761F6501622CC7600029E43 /* ofxTLKeyframes.cpp */; };
 		E761F7141622CC7900029E43 /* ofxTLLFO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E761F6521622CC7600029E43 /* ofxTLLFO.cpp */; };
-		E761F7151622CC7900029E43 /* ofxTLLFO_.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E761F6541622CC7600029E43 /* ofxTLLFO_.cpp */; };
 		E761F7161622CC7900029E43 /* ofxTLPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E761F6561622CC7600029E43 /* ofxTLPage.cpp */; };
 		E761F7171622CC7900029E43 /* ofxTLPageTabs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E761F6581622CC7600029E43 /* ofxTLPageTabs.cpp */; };
 		E761F7181622CC7900029E43 /* ofxTLSwitches.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E761F65A1622CC7600029E43 /* ofxTLSwitches.cpp */; };
@@ -200,8 +199,6 @@
 		E761F6511622CC7600029E43 /* ofxTLKeyframes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTLKeyframes.h; sourceTree = "<group>"; };
 		E761F6521622CC7600029E43 /* ofxTLLFO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTLLFO.cpp; sourceTree = "<group>"; };
 		E761F6531622CC7600029E43 /* ofxTLLFO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTLLFO.h; sourceTree = "<group>"; };
-		E761F6541622CC7600029E43 /* ofxTLLFO_.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTLLFO_.cpp; sourceTree = "<group>"; };
-		E761F6551622CC7600029E43 /* ofxTLLFO_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTLLFO_.h; sourceTree = "<group>"; };
 		E761F6561622CC7600029E43 /* ofxTLPage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTLPage.cpp; sourceTree = "<group>"; };
 		E761F6571622CC7600029E43 /* ofxTLPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTLPage.h; sourceTree = "<group>"; };
 		E761F6581622CC7600029E43 /* ofxTLPageTabs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxTLPageTabs.cpp; sourceTree = "<group>"; };
@@ -624,8 +621,6 @@
 				E761F6511622CC7600029E43 /* ofxTLKeyframes.h */,
 				E761F6521622CC7600029E43 /* ofxTLLFO.cpp */,
 				E761F6531622CC7600029E43 /* ofxTLLFO.h */,
-				E761F6541622CC7600029E43 /* ofxTLLFO_.cpp */,
-				E761F6551622CC7600029E43 /* ofxTLLFO_.h */,
 				E761F6561622CC7600029E43 /* ofxTLPage.cpp */,
 				E761F6571622CC7600029E43 /* ofxTLPage.h */,
 				E761F6581622CC7600029E43 /* ofxTLPageTabs.cpp */,
@@ -732,9 +727,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E4B69B5A0A3A1756003C02F2 /* emptyExample */ = {
+		E4B69B5A0A3A1756003C02F2 /* TimelineExampleEmpty */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "emptyExample" */;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "TimelineExampleEmpty" */;
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
@@ -746,7 +741,7 @@
 			dependencies = (
 				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
 			);
-			name = emptyExample;
+			name = TimelineExampleEmpty;
 			productName = myOFApp;
 			productReference = E4B69B5B0A3A1756003C02F2 /* emptyExampleDebug.app */;
 			productType = "com.apple.product-type.application";
@@ -756,7 +751,7 @@
 /* Begin PBXProject section */
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "emptyExample" */;
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "TimelineExampleEmpty" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -777,7 +772,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				E4B69B5A0A3A1756003C02F2 /* emptyExample */,
+				E4B69B5A0A3A1756003C02F2 /* TimelineExampleEmpty */,
 			);
 		};
 /* End PBXProject section */
@@ -840,7 +835,6 @@
 				E761F7121622CC7900029E43 /* ofxTLInOut.cpp in Sources */,
 				E761F7131622CC7900029E43 /* ofxTLKeyframes.cpp in Sources */,
 				E761F7141622CC7900029E43 /* ofxTLLFO.cpp in Sources */,
-				E761F7151622CC7900029E43 /* ofxTLLFO_.cpp in Sources */,
 				E761F7161622CC7900029E43 /* ofxTLPage.cpp in Sources */,
 				E761F7171622CC7900029E43 /* ofxTLPageTabs.cpp in Sources */,
 				E761F7181622CC7900029E43 /* ofxTLSwitches.cpp in Sources */,
@@ -1044,7 +1038,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../addons/ofxTimeline/libs/vorbis/lib/linux\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7 = "\"$(SRCROOT)/../../../addons/ofxTimeline/libs/vorbis/lib/linux64\"";
 				PREBINDING = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				PRODUCT_NAME = TimelineExampleEmptyDebug;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1144,7 +1138,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../addons/ofxTimeline/libs/vorbis/lib/linux\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_7 = "\"$(SRCROOT)/../../../addons/ofxTimeline/libs/vorbis/lib/linux64\"";
 				PREBINDING = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TimelineExampleEmpty;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1152,7 +1146,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "emptyExample" */ = {
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "TimelineExampleEmpty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B4E0A3A1720003C02F2 /* Debug */,
@@ -1161,7 +1155,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "emptyExample" */ = {
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "TimelineExampleEmpty" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E4B69B600A3A1757003C02F2 /* Debug */,
